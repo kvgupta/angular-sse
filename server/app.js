@@ -6,6 +6,7 @@ const Stream = new EventEmitter();
 app.use(parser.json()); 
 app.use(parser.urlencoded({ extended: true, }));
 app.get('/my-endpoint', function(request, response) {
+    response.header("Access-Control-Allow-Origin", "*");
     response.writeHead(200, { 
         'Content-Type': 'text/event-stream', 
         'Cache-Control': 'no-cache', 
@@ -20,4 +21,4 @@ setInterval(function () {
 }, 10000);
 
 app.listen(3000);
-console.log('Express E2E mock server is running');
+console.log('Server is running on Port 3000');

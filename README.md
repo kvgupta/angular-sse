@@ -1,4 +1,4 @@
-# AngularSse
+# Angular SSE
 
 This project was generated with Angular for POC for SSE Events implementation in angular.
 
